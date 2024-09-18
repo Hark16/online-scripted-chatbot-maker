@@ -1,0 +1,46 @@
+
+
+# Run Php without filename extension
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^(.*)$ $1.php
+
+
+php_value date.timezone 'Asia/Kolkata'
+
+# 301 Redirect Old File
+Redirect 301 /signup.php /signup
+
+# 301 Redirect Old File
+Redirect 301 /index.php /index
+
+
+# 301 Redirect Old File
+Redirect 301 /browse.php /browse
+
+
+# 301 Redirect Old File
+Redirect 301 /create.php /create
+
+
+# 301 Redirect Old File
+Redirect 301 /link.php /link
+
+
+# 301 Redirect Old File
+Redirect 301 /test.php /test
+
+
+# 301 Redirect Old File
+Redirect 301 /welcome.php /welcome
+
+
+
+
+ReWriteEngine On
+RewriteRule ^chat([^/.]+)?$ /chat.php?id=$1 [L]
+
+
+# 301 Redirect Old File
+Redirect 301 /chat.php /chat
